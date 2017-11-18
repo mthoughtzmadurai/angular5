@@ -7,6 +7,11 @@ before_script:
 - npm install -g @angular/cli
 script:
 - ng build --prod --aot --env=prod;
+- git add --force ./dist
+- git commit -m 'commiting for deploy to production'
+
+before_deploy:
+  - cd dist
 deploy:
   provider: elasticbeanstalk
   local_dir : dist
