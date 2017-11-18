@@ -10,6 +10,7 @@ script:
 - git commit -m 'commiting for deploy to production'
 deploy:
   provider: elasticbeanstalk
+  skip_cleanup: true
   access_key_id: $ACCESSKEYID
   secret_access_key:
     secure: "$SECRETACCESSKEY"
