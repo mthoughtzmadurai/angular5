@@ -8,7 +8,6 @@ script:
 - ng build --prod --aot --env=prod;
 - git add --force ./dist
 - git commit -m 'commiting for deploy to production'
-- npm start 
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
